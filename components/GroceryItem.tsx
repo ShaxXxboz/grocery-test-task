@@ -38,7 +38,7 @@ const GroceryItem: FC<GroceryItemProps> = memo(
           >
             {groceryItem.title} {bought && <CheckBoxIcon color="success" />}
           </Typography>
-          <Typography variant="h5" sx={{ marginTop: "1rem" }}>
+          <Typography variant="h5" component="div" sx={{ marginTop: "1rem" }}>
             ${groceryItem.price}
           </Typography>
         </CardContent>

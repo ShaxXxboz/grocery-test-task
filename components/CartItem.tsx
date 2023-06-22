@@ -57,6 +57,7 @@ const CartItem: FC<CartItemProps> = memo(({ item }) => {
           {groceryItem?.title}
         </Typography>
         <Typography
+          component="div"
           sx={{ position: "absolute", top: "1.2rem", right: "1.2rem" }}
         >
           ${(groceryItem?.price as number) * item.quantity}
@@ -70,7 +71,9 @@ const CartItem: FC<CartItemProps> = memo(({ item }) => {
           marginLeft: "1rem",
         }}
       >
-        <Typography sx={{ marginRight: "2rem" }}>Quantity:</Typography>
+        <Typography sx={{ marginRight: "2rem" }} component="div">
+          Quantity:
+        </Typography>
         <IconButton
           aria-label="remove"
           size="small"
@@ -78,7 +81,7 @@ const CartItem: FC<CartItemProps> = memo(({ item }) => {
         >
           <RemoveIcon fontSize="inherit" />
         </IconButton>
-        <Typography sx={{ margin: "0 1rem 0 1rem" }}>
+        <Typography sx={{ margin: "0 1rem 0 1rem" }} component="div">
           {item.quantity}
         </Typography>
         <IconButton aria-label="add" size="small" onClick={onAddToQuantity}>
