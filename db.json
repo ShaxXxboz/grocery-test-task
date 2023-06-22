@@ -1,0 +1,51 @@
+{
+  "groceries": [
+    {
+      "id": 1,
+      "title": "Tomato",
+      "price": 12
+    },
+    {
+      "id": 2,
+      "title": "Milk",
+      "price": 5
+    },
+    {
+      "id": 3,
+      "title": "Chips",
+      "price": 3
+    },
+    {
+      "id": 4,
+      "title": "Jerky",
+      "price": 9
+    },
+    {
+      "id": 5,
+      "title": "Ketchup",
+      "price": 4
+    },
+    {
+      "id": 6,
+      "title": "Soda",
+      "price": 1
+    },
+    {
+      "id": 7,
+      "title": "Butter",
+      "price": 6
+    }
+  ],
+  "cart": [
+    {
+      "id": "4RLzLT8v5mWauTdNGnfaU",
+      "productId": 1,
+      "quantity": 3
+    },
+    {
+      "id": "mStxlf6LV7-mi94awFClQ",
+      "productId": 2,
+      "quantity": 3
+    }
+  ]
+}
