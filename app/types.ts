@@ -11,7 +11,7 @@ export type CartItemType = {
 };
 
 export type GroceryItemProps = {
-  item: GroceryItemType;
+  groceryItem: GroceryItemType;
   onAddToCart: (item: GroceryItemType) => void;
 };
 

@@ -9,6 +9,7 @@ import { useGroceryItems } from "@/utils/hooks/useGroceryItems";
 import { useCartItems } from "@/utils/hooks/useCartItems";
 import { useCreateCartItem } from "@/utils/hooks/useCreateCartItem";
 import { useUpdateCartItem } from "@/utils/hooks/useUpdateCartItem";
+import { useCallback } from "react";
 
 const Home = () => {
   const { data: groceries, isLoading: isGroceriesLoading } = useGroceryItems();
@@ -17,20 +18,23 @@ const Home = () => {
   const createCartItemMutation = useCreateCartItem();
   const updateCartItemMutation = useUpdateCartItem();
 
-  const onAddToCart = (groceryItem: GroceryItemType) => {
-    const productInCart = cartItems?.find(
-      (cartItem) => cartItem.productId == groceryItem.id
-    );
+  const onAddToCart = useCallback(
+    (groceryItem: GroceryItemType) => {
+      const productInCart = cartItems?.find(
+        (cartItem) => cartItem.productId == groceryItem.id
+      );
 
-    if (productInCart) {
-      updateCartItemMutation.mutate({
-        ...productInCart,
-        quantity: productInCart.quantity + 1,
-      });
-    } else {
-      createCartItemMutation.mutate(groceryItem);
-    }
-  };
+      if (productInCart) {
+        updateCartItemMutation.mutate({
+          ...productInCart,
+          quantity: productInCart.quantity + 1,
+        });
+      } else {
+        createCartItemMutation.mutate(groceryItem);
+      }
+    },
+    [cartItems]
+  );
 
   if (isGroceriesLoading) {
     return <Typography>Loading...</Typography>;
@@ -48,7 +52,7 @@ const Home = () => {
       <Grid container spacing={2}>
         {groceries?.map((item: GroceryItemType) => (
           <Grid md={3} key={item.id}>
-            <GroceryItem item={item} onAddToCart={onAddToCart} />
+            <GroceryItem groceryItem={item} onAddToCart={onAddToCart} />
           </Grid>
         ))}
       </Grid>

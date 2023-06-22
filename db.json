@@ -38,14 +38,29 @@
   ],
   "cart": [
     {
-      "id": "qs9EMwkmDPeBdGSFmQyWI",
-      "productId": 1,
+      "id": "lmO9tdL-TeFDp2bbHTwPo",
+      "productId": 2,
       "quantity": 2
     },
     {
-      "id": "9H7Cal-VPrAimeizaIF7X",
+      "id": "6KFDOZEA1kCgJUFU7QpDa",
       "productId": 3,
+      "quantity": 7
+    },
+    {
+      "id": "T0-dK_CVWF5Dx5yshSLcp",
+      "productId": 7,
       "quantity": 1
+    },
+    {
+      "id": "TbIaNNTiLmUxSVMNog1-1",
+      "productId": 6,
+      "quantity": 1
+    },
+    {
+      "id": "BYn2a6R5wZrDWH-SOWeiJ",
+      "productId": 1,
+      "quantity": 5
     }
   ]
 }

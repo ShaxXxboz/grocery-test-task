@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
@@ -14,7 +14,7 @@ import { useGroceryItem } from "@/utils/hooks/useGroceryItem";
 import { useUpdateCartItem } from "@/utils/hooks/useUpdateCartItem";
 import { useDeleteCartItem } from "@/utils/hooks/useDeleteCartItem";
 
-const CartItem: FC<CartItemProps> = ({ item }) => {
+const CartItem: FC<CartItemProps> = memo(({ item }) => {
   const { data: groceryItem, isLoading } = useGroceryItem(item.productId);
   const updateCartItemMutation = useUpdateCartItem();
   const deleteCartItemMutation = useDeleteCartItem();
@@ -95,6 +95,6 @@ const CartItem: FC<CartItemProps> = ({ item }) => {
       </CardActions>
     </Card>
   );
-};
+});
 
 export default CartItem;
