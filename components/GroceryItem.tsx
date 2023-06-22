@@ -4,10 +4,10 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import Button from "@mui/material/Button";
 import { GroceryItemProps } from "@/app/types";
 import { useCartItems } from "@/utils/hooks/useCartItems";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
 const GroceryItem: FC<GroceryItemProps> = ({ item, onAddToCart }) => {
   const { data: cartItems } = useCartItems();

@@ -38,14 +38,14 @@
   ],
   "cart": [
     {
-      "id": "4RLzLT8v5mWauTdNGnfaU",
+      "id": "qs9EMwkmDPeBdGSFmQyWI",
       "productId": 1,
-      "quantity": 3
+      "quantity": 2
     },
     {
-      "id": "mStxlf6LV7-mi94awFClQ",
-      "productId": 2,
-      "quantity": 3
+      "id": "9H7Cal-VPrAimeizaIF7X",
+      "productId": 3,
+      "quantity": 1
     }
   ]
 }

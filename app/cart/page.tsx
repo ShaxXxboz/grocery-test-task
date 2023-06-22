@@ -40,7 +40,7 @@ function Cart() {
           <Grid container md={8} spacing={2}>
             {cartItems?.length ? (
               cartItems.map((item) => (
-                <Grid md={12}>
+                <Grid md={12} key={item.id}>
                   <CartItem item={item} />
                 </Grid>
               ))
@@ -55,7 +55,7 @@ function Cart() {
           <Card>
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Total: ${total}
+                Total: ${total || 0}
               </Typography>
               <Button variant="outlined">Checkout</Button>
             </CardContent>
